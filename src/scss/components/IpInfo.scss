@@ -1,0 +1,49 @@
+.ip-info {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+
+  &__container {
+
+  }
+
+  &__body {
+    @include adaptiveValue("row-gap", 30, 20);
+    @include adaptiveValue("padding", 30, 15);
+
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: rem(15);
+    box-shadow: 0 0 35px 0 rgb(0 0 0 / 25%);
+    background-color: #fff;
+  }
+}
+
+.item-ip-info {
+  flex: 1 1 percent(120, 1440);
+  padding: 0 rem(12.5);
+  min-width: rem(280);
+
+  &__body {
+    @include adaptiveValue("font-size", 24, 18);
+
+    font-weight: 500;
+    line-height: math.div(28, 24);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(13);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $darkGray;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  @media (max-width: em(649.98)) {
+    text-align: center;
+  }
+}
